@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
+using OpenQA.Selenium.Interactions;
 
 namespace Day24Week8OnboardingTask.Pages
 {
@@ -14,11 +16,11 @@ namespace Day24Week8OnboardingTask.Pages
         // ClickOnNotification
         public void ClickOnNotification(IWebDriver driver1)
         {
+            Thread.Sleep(2000);
             WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
-            IWebElement Notification = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"//div[@class='ui top left pointing dropdown item active visible']")));
+            IWebElement Notification = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"/html/body/div[1]/div/div[1]/div[2]/div/div")));
             Notification.Click();
             Thread.Sleep(1000);
-
         }
 
 
@@ -62,6 +64,15 @@ namespace Day24Week8OnboardingTask.Pages
 
         }
 
+        //ClickUnselectAllLink
+        public void ClickUnselectAllLink(IWebDriver driver1)
+        {
+            WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
+            IWebElement markAllRead = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"//div[@class='ui icon basic button button-icon-style']")));
+            markAllRead.Click();
+            Thread.Sleep(1000);
+
+        }
 
         //AllMessageShouldBeChecked
         public void AllMessageShouldBeChecked(IWebDriver driver1)
@@ -132,16 +143,61 @@ namespace Day24Week8OnboardingTask.Pages
 
 
         //UserClickDeleteAMessage
+        public void UserClickDeleteAMessage(IWebDriver driver1)
+        {
+            WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
+            IWebElement checkBox1 = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[2]/span/span/div/div[1]/div/div/div[3]/input")));
+            checkBox1.Click();
+            Thread.Sleep(1000);
+            IWebElement deleteButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"//div[@data-tooltip='Delete selection']")));
+            deleteButton.Click();
 
+        }
 
 
 
         //DeleteOneNotificationFromTheNotificationPage
 
+        public void DeleteOneNotification(IWebDriver driver1)
+        {
+            Thread.Sleep(1000);
+            IWebElement MessageDelete = driver1.FindElement(By.XPath("/html/body/div[1]/div"));
+            string actualMessage = MessageDelete.Text.Trim();
+
+            // The static part of the message you expect
+            string expectedStaticPart = "Notification updated";
+
+            // Assert that the actual message contains the expected static part
+            Assert.That(actualMessage.Contains(expectedStaticPart),
+                $"Error: The actual message '{actualMessage}' does not contain the expected text '{expectedStaticPart}'.");
+
+        }
+        //WhenUserSelectAMessage
+        public void UserSelectAMessage(IWebDriver driver1)
+        {
+            WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
+            IWebElement notification1 = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath($"//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[2]/span/span/div/div[1]/div/div/div[2]/div[2]/a")));
+            notification1.Click();
+            Thread.Sleep(1000);
+            
+        }
 
 
         //ShowReceivedRequestsPage
+        public void ShowReceivedRequestsPage(IWebDriver driver1)
+        {
+            Thread.Sleep(1000);
+            IWebElement MessageDelete = driver1.FindElement(By.XPath("//div[@class='ui container']//h2"));
+            string actualMessage = MessageDelete.Text.Trim();
 
+            // The static part of the message you expect
+            string expectedStaticPart = "Received Requests";
+
+            // Assert that the actual message contains the expected static part
+            Assert.That(actualMessage.Contains(expectedStaticPart),
+                $"Error: The actual message '{actualMessage}' does not contain the expected text '{expectedStaticPart}'.");
+
+        }
 
 
 

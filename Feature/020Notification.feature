@@ -28,6 +28,7 @@ Scenario: TS_121_TC_073 Verify 'mark all read' link on notification message
 	Scenario: TS_121_TC_075 Verify 'select all' button on notification message page
 	Given I loged into Skill website successfully with '<UserName>' and '<Password>'
 	When User click on Notification on the top right of the page
+	When User click see all link
 	When User click select all link
 	Then all message should be checked
 
@@ -39,7 +40,9 @@ Scenario: TS_121_TC_073 Verify 'mark all read' link on notification message
 	Scenario: TS_121_TC_076 Verify 'unselect all' button on notification message page
 	Given I loged into Skill website successfully with '<UserName>' and '<Password>'
 	When User click on Notification on the top right of the page
+	When User click see all link
 	When User click select all link
+	When User click unselect all link
 	Then All messages should be unchecked
 
 	 Examples: 
@@ -50,22 +53,24 @@ Scenario: TS_121_TC_073 Verify 'mark all read' link on notification message
 	Scenario: TS_121_TC_077 Verify delete a message on notification page
 	Given I loged into Skill website successfully with '<UserName>' and '<Password>'
 	When User click on Notification on the top right of the page
+	When User click see all link
 	When User click delete a message
 	Then It should delete one notification from the notification page
 
 	 Examples: 
     | UserName            | Password     |
-    | Tananya@hotmail.com | TananyaHappy | 
+    | Tananya1@hotmail.com | TananyaHappy | 
 
 	Scenario: TS_121_TC_078 Verify 'select one' link on notification message
 	Given I loged into Skill website successfully with '<UserName>' and '<Password>'
 	When User click on Notification on the top right of the page
+	When User click see all link
 	When User select a message
 	Then It should show Received Requests page
 
 	 Examples: 
     | UserName            | Password     |
-    | Tananya@hotmail.com | TananyaHappy | 
+    | Tananya1@hotmail.com | TananyaHappy | 
 
 
 

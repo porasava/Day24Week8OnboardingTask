@@ -1,3 +1,4 @@
+using Day24Week8OnboardingTask.Pages;
 using Day24Week8OnboardingTask.Utilities;
 using System;
 using TechTalk.SpecFlow;
@@ -10,67 +11,87 @@ namespace Day24Week8OnboardingTask.StepDefinitions
         [When(@"User click on Notification on the top right of the page")]
         public void WhenUserClickOnNotificationOnTheTopRightOfThePage()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.ClickOnNotification(driver1); 
         }
 
         [When(@"User click mark all read link")]
         public void WhenUserClickMarkAllReadLink()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.UserClickMarkAllReadLink(driver1);
         }
 
-        [Then(@"all Notification message should mark all read")]
-        public void ThenAllNotificationMessageShouldMarkAllRead()
-        {
-            throw new PendingStepException();
-        }
+        //[Then(@"all Notification message should mark all read")]
+        //public void ThenAllNotificationMessageShouldMarkAllRead()
+        //{
+        //    throw new PendingStepException();
+        //}
 
         [When(@"User click see all link")]
         public void WhenUserClickSeeAllLink()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.ClickSeeAllLink(driver1);
         }
 
         [When(@"User click select all link")]
         public void WhenUserClickSelectAllLink()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.SelectAllLink(driver1);
         }
 
         [Then(@"all message should be checked")]
         public void ThenAllMessageShouldBeChecked()
         {
-            throw new PendingStepException();
+           
+            Notification notificationobj = new Notification();
+            notificationobj.AllMessageShouldBeChecked(driver1);
         }
+
+        [When(@"User click unselect all link")]
+        public void WhenUserClickUnselectAllLink()
+        {
+            Notification notificationobj = new Notification();
+            notificationobj.ClickUnselectAllLink(driver1);
+        }
+
 
         [Then(@"All messages should be unchecked")]
         public void ThenAllMessagesShouldBeUnchecked()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.AllMessagesShouldBeUnchecked(driver1);
         }
 
         [When(@"User click delete a message")]
         public void WhenUserClickDeleteAMessage()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.UserClickDeleteAMessage(driver1);
         }
 
         [Then(@"It should delete one notification from the notification page")]
         public void ThenItShouldDeleteOneNotificationFromTheNotificationPage()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.DeleteOneNotification(driver1);
         }
 
         [When(@"User select a message")]
         public void WhenUserSelectAMessage()
         {
-            throw new PendingStepException();
+            Notification notificationobj = new Notification();
+            notificationobj.UserSelectAMessage(driver1);
         }
 
         [Then(@"It should show Received Requests page")]
         public void ThenItShouldShowReceivedRequestsPage()
         {
-            throw new PendingStepException();
+            
+            Notification notificationobj = new Notification();
+            notificationobj.ShowReceivedRequestsPage(driver1);
         }
     }
 }
