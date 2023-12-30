@@ -1,16 +1,9 @@
 ﻿using Day24Week8OnboardingTask.Utilities;
-using Microsoft.VisualBasic.FileIO;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Day24Week8OnboardingTask.Pages
 {

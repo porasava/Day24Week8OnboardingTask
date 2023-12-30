@@ -42,11 +42,8 @@ namespace Day24Week8OnboardingTask.Pages
         //SearchForAListingAndSendRequest
         public void SearchForAListingAndSendRequest(IWebDriver driver1, string title)
         {
-            //Thread.Sleep(1000);
+
             WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
-            //IWebElement searchSkillButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='ui secondary menu']//input[@placeholder='Search skills']")));
-            //searchSkillButton.SendKeys(title);
-            //searchSkillButton.SendKeys(Keys.Enter);
             Thread.Sleep(1000);
             IWebElement Listing = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//p[@class='row-padded']")));
             Listing.Click();
@@ -64,7 +61,7 @@ namespace Day24Week8OnboardingTask.Pages
         {
             Thread.Sleep(1000);
             WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
-IWebElement manageRequestsElement = driver1.FindElement(By.XPath("//div[contains(text(), 'Manage Requests')]"));
+            IWebElement manageRequestsElement = driver1.FindElement(By.XPath("//div[contains(text(), 'Manage Requests')]"));
             Actions action = new Actions(driver1);
             action.MoveToElement(manageRequestsElement).Perform();
             IWebElement ReceivedRequestsDropdown = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a[normalize-space()='Received Requests']")));
@@ -127,8 +124,6 @@ IWebElement manageRequestsElement = driver1.FindElement(By.XPath("//div[contains
 
 
         //ManageRequestDropdownAndSelectSelectSendRequests
-
-
         public void ClickDecline(IWebDriver driver1)
         {
             Thread.Sleep(1000);
