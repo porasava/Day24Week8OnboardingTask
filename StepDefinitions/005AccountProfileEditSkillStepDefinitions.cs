@@ -10,22 +10,22 @@ namespace Day24Week8OnboardingTask.StepDefinitions
     public class AccountProfileEditSkillStepDefinitions
     {
         private readonly IWebDriver driver1;
+        private readonly AccountProfileSkillEdit AccountPageEditObj;
         public AccountProfileEditSkillStepDefinitions(CommonDriver commonDriver)
         {
             driver1 = commonDriver.Driver;
+            AccountPageEditObj = new AccountProfileSkillEdit(driver1);
         }
         [When(@"I edit a skill with '([^']*)'")]
         public void WhenIEditASkillWith(string skill)
         {
-            AccountProfileSkillEdit AccountPageObj = new AccountProfileSkillEdit(driver1);
-            AccountPageObj.EditASkill(skill);
+            AccountPageEditObj.EditASkill(skill);
         }
 
         [Then(@"The skill should edit successfully")]
         public void ThenTheSkillShouldEditSuccessfully()
         {
-            AccountProfileSkillEdit AccountPageObj = new AccountProfileSkillEdit(driver1);
-            AccountPageObj.SkillShouldEditSuccessfully();
+            AccountPageEditObj.SkillShouldEditSuccessfully();
         }
     }
 }

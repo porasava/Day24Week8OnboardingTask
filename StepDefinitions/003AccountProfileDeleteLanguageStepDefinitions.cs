@@ -14,30 +14,29 @@ namespace Day24Week8OnboardingTask.StepDefinitions
     public class _003AccountProfileDeleteLanguageStepDefinitions
     {
         private readonly IWebDriver driver1;
+        private readonly AccountProfileLanguageDelete AccountPageDeleteObj;
 
         public _003AccountProfileDeleteLanguageStepDefinitions(CommonDriver commonDriver)
         {
             driver1 = commonDriver.Driver;
+            AccountPageDeleteObj = new AccountProfileLanguageDelete(driver1);
         }
         [Then(@"Remove Language")]
         public void ThenRemoveLanguage()
         {
-            AccountProfileLanguageDelete AccountPageObj = new AccountProfileLanguageDelete(driver1);
-            AccountPageObj.RemoveLanguage();
+            AccountPageDeleteObj.RemoveLanguage();
         }
 
         [When(@"I delete a Language '([^']*)'")]
         public void WhenIDeleteALanguage(string languageDelete)
         {
-            AccountProfileLanguageDelete AccountPageObj = new AccountProfileLanguageDelete(driver1);
-            AccountPageObj.DeleteALanguage(languageDelete);
+            AccountPageDeleteObj.DeleteALanguage(languageDelete);
         }
 
         [Then(@"Language should be remove successful")]
         public void ThenLanguageShouldBeRemoveSuccessful()
         {
-            AccountProfileLanguageDelete AccountPageObj = new AccountProfileLanguageDelete(driver1);
-            AccountPageObj.LanguageShouldBeRemoveSuccessful();
+            AccountPageDeleteObj.LanguageShouldBeRemoveSuccessful();
         }
 
 

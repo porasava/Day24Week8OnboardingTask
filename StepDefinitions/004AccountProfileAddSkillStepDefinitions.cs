@@ -10,48 +10,45 @@ namespace Day24Week8OnboardingTask.StepDefinitions
     public class AccountProfileAddSkillStepDefinitions
     {
         private readonly IWebDriver driver1;
+        private readonly AccountProfileAddSkill AccountPageAddObj;
+        private readonly AccountProfileSkillError AccountPageErrorObj;
+        private readonly AccountProfileSkillDelete AccountPageDeleteObj;
         public AccountProfileAddSkillStepDefinitions(CommonDriver commonDriver)
         {
             driver1 = commonDriver.Driver;
-
+            AccountPageAddObj = new AccountProfileAddSkill(driver1);
+            AccountPageErrorObj = new AccountProfileSkillError(driver1);
+            AccountPageDeleteObj = new AccountProfileSkillDelete(driver1);
         }
      
         [When(@"I add a new Skill with '([^']*)', and '([^']*)'")]
         public void WhenIAddANewSkillWithAnd(string skill, string skillLevel)
         {
-            AccountProfileAddSkill AccountPageObj = new AccountProfileAddSkill(driver1);
-            AccountPageObj.AddANewSkill( skill, skillLevel);
-
+            AccountPageAddObj.AddANewSkill( skill, skillLevel);
         }
 
         [Then(@"It shoulsd show new Skill")]
         public void ThenItShoulsdShowNewSkill()
         {
-            AccountProfileSkillError AccountPageObj = new AccountProfileSkillError(driver1);
-            AccountPageObj.ShowNewSkill();
+            AccountPageErrorObj.ShowNewSkill();
         }
 
         [Then(@"I delete a Skill '([^']*)'")]
         public void ThenIDeleteASkill(string skillDelete)
         {
-            AccountProfileSkillDelete AccountPageObj = new AccountProfileSkillDelete(driver1);
-            AccountPageObj.DeleteASkill( skillDelete);
+            AccountPageDeleteObj.DeleteASkill( skillDelete);
         }
 
         [Then(@"Skill should be remove successfully")]
         public void ThenSkillShouldBeRemoveSuccessfully()
         {
-            AccountProfileSkillDelete AccountPageObj = new AccountProfileSkillDelete(driver1);
-            AccountPageObj.SkillShouldBeRemoveSuccessfully();
+            AccountPageDeleteObj.SkillShouldBeRemoveSuccessfully();
         }
-
 
         [Then(@"It shoulsd show error Please enter skill and experience level")]
         public void ThenItShoulsdShowErrorPleaseEnterSkillAndExperienceLevel()
         {
-
-            AccountProfileSkillError AccountPageObj = new AccountProfileSkillError(driver1);
-            AccountPageObj.ErrorPleaseEnterSkillAndExperienceLevel();
+            AccountPageErrorObj.ErrorPleaseEnterSkillAndExperienceLevel();
         }
     }
 }

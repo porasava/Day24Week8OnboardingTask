@@ -14,29 +14,27 @@ namespace Day24Week8OnboardingTask.StepDefinitions
     public class AccountProfileErrorLanguageStepDefinitions
     {        
         private readonly IWebDriver driver1;
+        private readonly AccountProfileLanguageError AccountPageErrorObj;
         public AccountProfileErrorLanguageStepDefinitions(CommonDriver commonDriver)
         {
             driver1 = commonDriver.Driver;
+            AccountPageErrorObj = new AccountProfileLanguageError(driver1);
         }
         [Then(@"It should show error Please enter language and level")]
         public void ThenItShouldShowErrorPleaseEnterLanguageAndLevel()
         {
-
-            AccountProfileLanguageError AccountPageObj = new AccountProfileLanguageError(driver1);
-            AccountPageObj.ErrorPleaseenterlanguageandlevel();
+            AccountPageErrorObj.ErrorPleaseenterlanguageandlevel();
         }
         [Then(@"It should show error This language is already exist in your language list")]
         public void ThenItShouldShowErrorThisLanguageIsAlreadyExistInYourLanguageList()
         {
-            AccountProfileLanguageError AccountPageObj = new AccountProfileLanguageError(driver1);
-            AccountPageObj.ErrorThisLanguageIsAlreadyExistInYourLanguageList();
+            AccountPageErrorObj.ErrorThisLanguageIsAlreadyExistInYourLanguageList();
         }
 
         [Then(@"It should show Error This language is already added to your language list\.")]
         public void ThenItShouldShowErrorThisLanguageIsAlreadyAddedToYourLanguageList_()
-        {
-            AccountProfileLanguageError AccountPageObj = new AccountProfileLanguageError(driver1);
-            AccountPageObj.ErrorThisLanguageIsAlreadyAddedToYourLanguageList();
+        {            
+            AccountPageErrorObj.ErrorThisLanguageIsAlreadyAddedToYourLanguageList();
         }
     }
 }
