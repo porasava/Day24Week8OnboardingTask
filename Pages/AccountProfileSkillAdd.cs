@@ -32,7 +32,6 @@ namespace Day24Week8OnboardingTask.Pages
         //AddANewSkill
         public void AddANewSkill(string skill, string skillLevel)
         {
-            WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(8));
             Wait.WaitToBeClickable(driver1, skillTab1, 5);
             skillTab.Click();
             Wait.WaitToBeClickable(driver1, addNewSkill1, 5);

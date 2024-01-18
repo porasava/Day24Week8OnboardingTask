@@ -23,7 +23,6 @@ namespace Day24Week8OnboardingTask.Pages
         private IWebElement languageText => driver1.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
         private IWebElement languageUpdate => driver1.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/span/input[1]"));
         private IWebElement languagePopUp => driver1.FindElement(languagePopUp1);
-        private IWebElement languagePopUpClose => driver1.FindElement(By.XPath("//a[@class='ns-close']"));
 
         //EditALanguage
         public void EditALanguage( string languageEdit)
@@ -40,8 +39,6 @@ namespace Day24Week8OnboardingTask.Pages
         public void LanguageShouldBeEdited(string languageEdit)
         {
             Thread.Sleep(2000);
-            // Wait.WaitForElementToDisappear(driver1, languagePopUp1, 5);
-           // languagePopUpClose.Click();
             Wait.ElementIsVisible(driver1, languagePopUp1, 8);
             string actualMessage = languagePopUp.Text.Trim();
             // The static part of the message you expect

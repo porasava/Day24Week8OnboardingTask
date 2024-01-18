@@ -30,24 +30,18 @@ namespace Day24Week8OnboardingTask.Pages
         public void InputUsernameAndPassword(string username, string password)
         {
             // click SIgnIn button
-       //     Wait.WaitToExist(driver1, loginButton, 8);
             loginButton.Click();
-
-            //user login
-         //   Wait.WaitToExist(driver1, usernameTextbox, 8);
             usernameTextbox.SendKeys(username);
             passwordTextbox.SendKeys(password);
         }
 
         public void ClickOnLogin()
         {
-        //    Wait.WaitToExist(driver1, loginButtonPopUp, 8);
             loginButtonPopUp.Click();
         }
  
         public void GoToAccountProfilePage()
         {
-       //     Wait.WaitToExist(driver1, AccountProfilePage, 5);
             Assert.That(AccountProfilePage.Text == "Mars Logo", "text is not show. It should show 'Mars Logo'");
         }
     }

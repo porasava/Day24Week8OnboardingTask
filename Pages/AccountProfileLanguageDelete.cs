@@ -21,7 +21,6 @@ namespace Day24Week8OnboardingTask.Pages
         By deleteError1 => By.XPath("/html/body/div[1]/div");
         private IWebElement deleteIcon => driver1.FindElement(deleteIcon1);
         private IWebElement deleteError => driver1.FindElement(deleteError1);
-        private IWebElement PopUpClose => driver1.FindElement(By.XPath("//a[@class='ns-close']"));
 
         //RemoveLanguage
         public void RemoveLanguage()

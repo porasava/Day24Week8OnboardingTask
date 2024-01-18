@@ -22,7 +22,6 @@ namespace Day24Week8OnboardingTask.Pages
         By GoToProfileDropdown1 => By.XPath("//a[normalize-space()='Go to Profile']");
         By languageAdd1 => By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]");
         By languageText1 => By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[1]/input");
-
         private IWebElement AccountButton1 => driver1.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/div[1]/div[2]/div/span"));
         private IWebElement GoToProfileDropdown => driver1.FindElement(GoToProfileDropdown1);
         private IWebElement editIcon => driver1.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
@@ -42,7 +41,6 @@ namespace Day24Week8OnboardingTask.Pages
         // AddNewLanguage
         public void addNewLanguage(string language, string languageLevel)
         {
-
             language = language.Replace("[SPACE]", " ");
             language = language.Replace("[NEWLINE]", "\n");
             editIcon.Click();
@@ -68,6 +66,7 @@ namespace Day24Week8OnboardingTask.Pages
         {
             bool isElementPresent;
             clickAddLanguage();
+            Thread.Sleep(1000);
             Wait.WaitForElementToDisappear(driver1, languageAdd1,8);
             try
             {

@@ -46,7 +46,6 @@ namespace Day24Week8OnboardingTask.Pages
         {
             Thread.Sleep(2000);
             Wait.ElementIsVisible(driver1, deleteError1, 5);
-           // PopUpClose.Click();
             Wait.ElementIsVisible(driver1, deleteError1, 5);
             string actualMessage = deleteError.Text.Trim();
             // The static part of the message you expect
