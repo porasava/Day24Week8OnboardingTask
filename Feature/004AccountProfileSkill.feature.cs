@@ -20,22 +20,22 @@ namespace Day24Week8OnboardingTask.Feature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("004AccountProfileAddSkill")]
-    public partial class _004AccountProfileAddSkillFeature
+    [NUnit.Framework.DescriptionAttribute("AccountProfileSkill")]
+    public partial class AccountProfileSkillFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "004AccountProfileAddSkill.feature"
+#line 1 "004AccountProfileSkill.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "004AccountProfileAddSkill", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "AccountProfileSkill", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -102,18 +102,21 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
- testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
- testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 11
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 12
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -134,7 +137,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillLevel", skillLevel);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_002 Verify that the user add a skill on the account profile page  with " +
                     "incorrect mandatory", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+#line 19
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -144,16 +147,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 19
+#line 20
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 21
- testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 23
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
  testRunner.Then("It shoulsd show error Please enter skill and experience level", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -175,7 +181,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillDelete", skillDelete);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_003 Verify that the user add a new skill on the account profile page wi" +
                     "th space on Add skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 29
+#line 31
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -185,22 +191,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 30
+#line 32
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 31
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 32
- testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 33
- testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 34
- testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 35
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 36
+ testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 37
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 38
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -222,7 +231,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillDelete", skillDelete);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_004 Verify that the user add a new skill on the account profile page wi" +
                     "th special character on Add skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 42
+#line 45
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -232,22 +241,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 43
+#line 46
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 44
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 45
- testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 46
- testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
 #line 47
- testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 48
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 49
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 50
+ testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 51
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 52
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -269,7 +281,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillDelete", skillDelete);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_005 Verify that the user add a new skill on the account profile page wi" +
                     "th over 50 characters on Add skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 54
+#line 58
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -279,22 +291,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 55
+#line 59
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 56
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 60
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 57
+#line 61
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 62
  testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 58
+#line 63
  testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 59
+#line 64
  testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 60
+#line 65
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -316,7 +331,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillDelete", skillDelete);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_006 Verify that the user add a new skill on the account profile page wi" +
                     "th duplicate on Add skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 67
+#line 72
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -326,22 +341,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 68
+#line 73
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 69
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 70
+#line 75
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 76
  testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
+#line 77
  testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 72
+#line 78
  testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 73
+#line 79
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -363,7 +381,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillDelete", skillDelete);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_007 Verify that the user add a new skill on the account profile page wi" +
                     "th a paragraph on Add skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 80
+#line 86
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -373,22 +391,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 81
+#line 87
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 82
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 88
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 83
+#line 89
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 90
  testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 84
+#line 91
  testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 85
+#line 92
  testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 86
+#line 93
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -408,7 +429,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("SkillLevel", skillLevel);
             argumentsOfScenario.Add("SkillDelete", skillDelete);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_201_TC_008 Verify that the user click on cancel button on the skill tab", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 93
+#line 100
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -418,23 +439,285 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 94
+#line 101
  testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 95
- testRunner.When("I navigate to account profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 102
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 96
+#line 103
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 104
  testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 97
+#line 105
  testRunner.Then("It shoulsd show new Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 98
+#line 106
  testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 99
+#line 107
  testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("TS_202_TC_001 Verify that the user edit a skill on the account profile page")]
+        [NUnit.Framework.TestCaseAttribute("Tananya@hotmail.com", "TananyaHappy", "Communication", "Expert", "Teamwork", "Teamwork", null)]
+        public void TS_202_TC_001VerifyThatTheUserEditASkillOnTheAccountProfilePage(string userName, string password, string skill, string skillLevel, string skillEdit, string skillDelete, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserName", userName);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Skill", skill);
+            argumentsOfScenario.Add("SkillLevel", skillLevel);
+            argumentsOfScenario.Add("SkillEdit", skillEdit);
+            argumentsOfScenario.Add("SkillDelete", skillDelete);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_202_TC_001 Verify that the user edit a skill on the account profile page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 114
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 115
+ testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 116
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 117
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 118
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 119
+ testRunner.When(string.Format("I edit a skill with \'{0}\'", skillEdit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 120
+ testRunner.Then("The skill should edit successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 121
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 122
+ testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("TS_202_TC_002 Verify that the user edit a skill on the account profile page with " +
+            "blank skill field")]
+        [NUnit.Framework.TestCaseAttribute("Tananya@hotmail.com", "TananyaHappy", "Communication", "Expert", "Teamwork", "Teamwork", null)]
+        public void TS_202_TC_002VerifyThatTheUserEditASkillOnTheAccountProfilePageWithBlankSkillField(string userName, string password, string skill, string skillLevel, string skillEdit, string skillDelete, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserName", userName);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Skill", skill);
+            argumentsOfScenario.Add("SkillLevel", skillLevel);
+            argumentsOfScenario.Add("SkillEdit", skillEdit);
+            argumentsOfScenario.Add("SkillDelete", skillDelete);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_202_TC_002 Verify that the user edit a skill on the account profile page with " +
+                    "blank skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 129
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 130
+ testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 131
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 132
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 133
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 134
+ testRunner.When(string.Format("I edit a skill with \'{0}\'", skillEdit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 135
+ testRunner.Then("The skill should edit successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 136
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 137
+ testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("TS_202_TC_003 Verify that the user edit a skill on the account profile page with " +
+            "same skill field")]
+        [NUnit.Framework.TestCaseAttribute("Tananya@hotmail.com", "TananyaHappy", "Communication", "Expert", "Teamwork", "Teamwork", null)]
+        public void TS_202_TC_003VerifyThatTheUserEditASkillOnTheAccountProfilePageWithSameSkillField(string userName, string password, string skill, string skillLevel, string skillEdit, string skillDelete, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserName", userName);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Skill", skill);
+            argumentsOfScenario.Add("SkillLevel", skillLevel);
+            argumentsOfScenario.Add("SkillEdit", skillEdit);
+            argumentsOfScenario.Add("SkillDelete", skillDelete);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_202_TC_003 Verify that the user edit a skill on the account profile page with " +
+                    "same skill field", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 144
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 145
+ testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 146
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 147
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 148
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 149
+ testRunner.When(string.Format("I edit a skill with \'{0}\'", skillEdit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 150
+ testRunner.Then("The skill should edit successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 151
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 152
+ testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("TS_202_TC_004 Verify that the user edit a skill level on the account profile page" +
+            " to be skill level")]
+        [NUnit.Framework.TestCaseAttribute("Tananya@hotmail.com", "TananyaHappy", "Communication", "Expert", "Teamwork", "Teamwork", null)]
+        public void TS_202_TC_004VerifyThatTheUserEditASkillLevelOnTheAccountProfilePageToBeSkillLevel(string userName, string password, string skill, string skillLevel, string skillEdit, string skillDelete, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserName", userName);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Skill", skill);
+            argumentsOfScenario.Add("SkillLevel", skillLevel);
+            argumentsOfScenario.Add("SkillEdit", skillEdit);
+            argumentsOfScenario.Add("SkillDelete", skillDelete);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_202_TC_004 Verify that the user edit a skill level on the account profile page" +
+                    " to be skill level", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 159
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 160
+ testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 161
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 162
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 163
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 164
+ testRunner.When(string.Format("I edit a skill with \'{0}\'", skillEdit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 165
+ testRunner.Then("The skill should edit successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 166
+ testRunner.Then(string.Format("I delete a Skill \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 167
+ testRunner.Then("Skill should be remove successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("TS_203_TC_001 Verify that the user delete a skill on the account profile page")]
+        [NUnit.Framework.TestCaseAttribute("Tananya@hotmail.com", "TananyaHappy", "Creativity", "Expert", "Creativity", null)]
+        public void TS_203_TC_001VerifyThatTheUserDeleteASkillOnTheAccountProfilePage(string userName, string password, string skill, string skillLevel, string skillDelete, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("UserName", userName);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Skill", skill);
+            argumentsOfScenario.Add("SkillLevel", skillLevel);
+            argumentsOfScenario.Add("SkillDelete", skillDelete);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("TS_203_TC_001 Verify that the user delete a skill on the account profile page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 175
+ this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 176
+ testRunner.Given(string.Format("I loged into Skill website successfully with \'{0}\' and \'{1}\'", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 177
+ testRunner.When("I navigate to account profile Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 178
+ testRunner.When("I check existing Skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 179
+ testRunner.When(string.Format("I add a new Skill with \'{0}\', and \'{1}\'", skill, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 180
+ testRunner.When(string.Format("I delete a skill with \'{0}\'", skillDelete), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 181
+ testRunner.Then("The skill should delete successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
